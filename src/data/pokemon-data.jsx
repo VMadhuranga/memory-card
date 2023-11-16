@@ -2,7 +2,7 @@ export async function fetchPokemonData() {
   try {
     const pokemonData = [];
 
-    for (let i = 1; i <= 15; i++) {
+    for (let i = 1; i <= 16; i++) {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`, {
         mode: "cors",
       });
