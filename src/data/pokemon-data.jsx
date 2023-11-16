@@ -1,7 +1,7 @@
-export const pokemonData = [];
-
-async function fetchPokemonData() {
+export async function fetchPokemonData() {
   try {
+    const pokemonData = [];
+
     for (let i = 1; i <= 15; i++) {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`, {
         mode: "cors",
@@ -19,9 +19,9 @@ async function fetchPokemonData() {
         imageURL: data.sprites.other["official-artwork"].front_default,
       });
     }
+
+    return pokemonData;
   } catch (error) {
     console.log(error);
   }
 }
-
-fetchPokemonData();
