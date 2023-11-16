@@ -1,0 +1,12 @@
+.score-board {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.score-board p {
+  font-size: 1.2rem;
+  color: #1e2761;
+  font-weight: bold;
+}
