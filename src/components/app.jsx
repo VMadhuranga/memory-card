@@ -48,6 +48,7 @@ export function App() {
         <CardContainer
           pokemonData={pokemonData}
           handleScore={handleScoreChange}
+          updatePokemonData={updatePokemonData}
         ></CardContainer>
       </main>
       <footer>
