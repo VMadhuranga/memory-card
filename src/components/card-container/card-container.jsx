@@ -1,6 +1,6 @@
 import { Card } from "../card/card";
 
-export function CardContainer({ pokemonData }) {
+export function CardContainer({ pokemonData, handleScore }) {
   const cards = [];
 
   pokemonData.forEach((pokemon) => {
@@ -10,6 +10,7 @@ export function CardContainer({ pokemonData }) {
         src={pokemon.imageURL}
         alt={pokemon.name}
         name={pokemon.name}
+        handleClick={handleScore}
       ></Card>,
     );
   });
