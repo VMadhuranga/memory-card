@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 
 export function App() {
   const [pokemonData, updatePokemonData] = useState([]);
+  // current score calculated by using currentScore.length
+  const [currentScore, updateCurrentScore] = useState([]);
+  let [bestScore, updateBestScore] = useState(0);
 
   useEffect(() => {
     let ignore = false;
@@ -20,6 +23,17 @@ export function App() {
     };
   }, []);
 
+  function handleScoreChange(e) {
+    if (!currentScore.includes(e.target.dataset.name)) {
+      updateCurrentScore([...currentScore, e.target.dataset.name]);
+    } else if (bestScore < currentScore.length) {
+      updateBestScore(currentScore.length);
+      updateCurrentScore([]);
+    } else {
+      updateCurrentScore([]);
+    }
+  }
+
   return (
     <>
       <header>
@@ -27,8 +41,14 @@ export function App() {
         <p>Do not pick same card twice</p>
       </header>
       <main>
-        <ScoreBoard></ScoreBoard>
-        <CardContainer pokemonData={pokemonData}></CardContainer>
+        <ScoreBoard
+          currentScore={currentScore.length}
+          bestScore={bestScore}
+        ></ScoreBoard>
+        <CardContainer
+          pokemonData={pokemonData}
+          handleScore={handleScoreChange}
+        ></CardContainer>
       </main>
       <footer>
         <p>&copy; 2023 VMadhuranga</p>
