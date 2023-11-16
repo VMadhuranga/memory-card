@@ -2,6 +2,7 @@ import { fetchPokemonData } from "../data/pokemon-data";
 import { CardContainer } from "./card-container/card-container";
 import { ScoreBoard } from "./score-board/score-board";
 import { useEffect, useState } from "react";
+import "./app.css";
 
 export function App() {
   const [pokemonData, updatePokemonData] = useState([]);

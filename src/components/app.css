@@ -1,0 +1,27 @@
+header,
+footer {
+  text-align: center;
+  color: white;
+  background-color: #b85042;
+  padding: 15px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p,
+footer p {
+  font-size: 1.3rem;
+}
+
+main {
+  flex: 1;
+  background-color: #a7beae;
+  padding: 15px 15px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
