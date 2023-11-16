@@ -7,7 +7,10 @@ export function Card({ src, alt, name, handleClick }) {
         width={"200px"}
         height={"200px"}
         data-name={name}
-        onClick={handleClick}
+        onClick={(e) => {
+          handleClick.handleScore(e);
+          handleClick.shufflePokemonCards();
+        }}
       />
       <p>{name}</p>
     </div>
