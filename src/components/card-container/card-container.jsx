@@ -1,4 +1,5 @@
 import { Card } from "../card/card";
+import "./card-container.css";
 
 export function CardContainer({ pokemonData, handleScore, updatePokemonData }) {
   const cards = [];
@@ -32,5 +33,5 @@ export function CardContainer({ pokemonData, handleScore, updatePokemonData }) {
     );
   });
 
-  return <div>{cards}</div>;
+  return <div className="card-container">{cards}</div>;
 }
