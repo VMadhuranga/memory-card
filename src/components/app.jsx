@@ -39,7 +39,7 @@ export function App() {
     <>
       <header>
         <h1>Memory Card</h1>
-        <p>Do not pick same card twice</p>
+        <p>Do not pick same card twice!</p>
       </header>
       <main>
         <ScoreBoard
